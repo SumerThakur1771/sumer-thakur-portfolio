@@ -167,9 +167,13 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Project Image */}
-              <div className="w-full lg:w-1/2 flex justify-center items-center">
+              <div
+                className={`w-full ${
+                  project.type === 'mobile' ? 'lg:w-[280px] mx-auto' : 'lg:w-1/2'
+                } flex justify-center items-center`}
+              >
                 {project.type === 'mobile' ? (
-                  <div className="aspect-[9/16] w-full max-w-xs bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20 shadow-lg">
+                  <div className="aspect-[9/16] w-full bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20 shadow-lg">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -247,4 +251,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
