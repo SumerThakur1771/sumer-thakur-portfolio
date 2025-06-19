@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from './ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -11,7 +11,7 @@ const Projects = () => {
       link: 'https://stayscape-v7dj.onrender.com/listings',
       github: 'https://github.com/SumerThakur1771/StayScape',
       tech: ['React', 'Node.js', 'MongoDB', 'Mapbox', 'Cloudinary'],
-      image: 'https://i.imgur.com/8DhFxRI.png'
+      image: '/lovable-uploads/eb5dea90-7779-4f0f-8eae-f73280d2a173.png'
     },
     {
       title: 'EchoMates',
@@ -19,7 +19,7 @@ const Projects = () => {
       link: 'https://www.figma.com/proto/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam',
       github: 'https://www.figma.com/design/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam?node-id=79-153&t=oUw3n7Exz6qQEhhP-0',
       tech: ['Figma', 'UX Design', 'Prototyping', 'AI Integration'],
-      image: 'https://i.imgur.com/FWRcK6c.png'
+      image: '/lovable-uploads/2e1897c3-7005-4aae-90d4-593b636ca9be.png'
     }
   ];
 
@@ -92,8 +92,17 @@ const Projects = () => {
                     className="border-purple-500/30 hover:bg-purple-500/20 px-6 py-3 rounded-full font-medium"
                     onClick={() => window.open(project.github, '_blank')}
                   >
-                    <Github className="mr-2 h-4 w-4" />
-                    {project.title === 'EchoMates' ? 'Wireframe Link' : 'Code'}
+                    {project.title === 'EchoMates' ? (
+                      <>
+                        <FileText className="mr-2 h-4 w-4" />
+                        Wireframe Link
+                      </>
+                    ) : (
+                      <>
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Code
+                      </>
+                    )}
                   </Button>
                 </div>
               </div>

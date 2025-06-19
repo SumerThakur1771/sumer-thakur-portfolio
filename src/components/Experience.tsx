@@ -15,42 +15,23 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Graduate Teaching Assistant',
+      title: 'Master of Science in Information Systems',
       company: 'Northeastern University',
-      location: 'Boston, Massachusetts, United States',
-      duration: 'Sep 2024 - Present',
-      brief: 'Assisted students in mastering web development concepts including HTML, CSS, REST, HTTP, SASS, MERN stack, and Agile methodologies.',
+      location: 'Boston, Massachusetts',
+      duration: 'Sep 2024 - Dec 2026',
       description: [
-        'Assisted students in mastering concepts related to HTML, CSS, REST, HTTP, SASS, MERN stack, Agile methodologies, and Domain-Driven Design as part of the "Web Design and User Experience Engineering" course',
-        'Guided students in implementing responsive designs, debugging code, and understanding user-centric design principles',
-        'Supported the application of Agile practices and Domain-Driven Design techniques in project development',
-        'Provided mentorship during coding assignments, facilitated lab sessions, and ensured adherence to best practices in modern web development',
-        'Collaborated with the professor to develop course materials and evaluate project submissions'
+        'Relevant Coursework: Web Design and User Experience, Application Engineering and Development, Concepts of Object-Oriented Design, User Experience Design and Testing',
+        'Maintaining strong academic performance with focus on practical application of theoretical concepts',
+        'Actively participating in research projects and collaborative learning environments'
       ],
-      skills: ['Web Development', 'Teaching', 'MERN Stack', 'Agile Methodologies', 'Mentoring'],
-      type: 'work'
-    },
-    {
-      title: 'Web Application Developer',
-      company: 'Northeastern University',
-      location: 'Boston, Massachusetts, United States',
-      duration: 'Jan 2024 - Sep 2024',
-      brief: 'Developed and maintained web applications using modern technologies and frameworks.',
-      description: [
-        'Developed and maintained web applications using React.js, Node.js, and MongoDB',
-        'Implemented responsive user interfaces and optimized application performance',
-        'Collaborated with cross-functional teams to deliver high-quality software solutions',
-        'Participated in code reviews and maintained coding standards'
-      ],
-      skills: ['React.js', 'Node.js', 'MongoDB', 'Web Development'],
-      type: 'work'
+      skills: ['Information Systems', 'Software Engineering', 'Web Development', 'UX Design'],
+      type: 'education'
     },
     {
       title: 'Event Assistant',
       company: 'Northeastern University',
-      location: 'Boston, Massachusetts, United States',
+      location: 'Boston, Massachusetts',
       duration: 'Jan 2025 - Present',
-      brief: 'Maintained safety and order by enforcing regulations and delivered welcoming event experiences.',
       description: [
         'Maintained safety and order by enforcing Fire Marshal and NU Division of Public Safety regulations.',
         'Delivered welcoming event experiences by addressing inquiries and ensuring smooth audience engagement.',
@@ -62,9 +43,8 @@ const Experience = () => {
     {
       title: 'Digital Operation Intern',
       company: 'Ralson India Limited',
-      location: 'Ludhiana, Punjab, India',
+      location: 'Ludhiana, Punjab',
       duration: 'Jan 2024 - Jun 2024',
-      brief: 'Enhanced website usability and increased user engagement through WordPress redesign and SEO optimization.',
       description: [
         'Enhanced website usability and increased user engagement by 5% through WordPress redesign and optimization.',
         'Achieved 4% growth in organic traffic through targeted SEO strategies and keyword optimization.',
@@ -73,20 +53,6 @@ const Experience = () => {
       ],
       skills: ['WordPress', 'SEO', 'UI/UX Design', 'ERP Integration'],
       type: 'work'
-    },
-    {
-      title: 'Master of Science in Information Systems',
-      company: 'Northeastern University',
-      location: 'Boston, MA',
-      duration: 'Sep 2024 - Dec 2026',
-      brief: 'Pursuing advanced studies in information systems with focus on full-stack development and software engineering.',
-      description: [
-        'Relevant Coursework: Web Design and User Experience, Application Engineering and Development, Concepts of Object-Oriented Design, User Experience Design and Testing',
-        'Maintaining strong academic performance with focus on practical application of theoretical concepts',
-        'Actively participating in research projects and collaborative learning environments'
-      ],
-      skills: ['Information Systems', 'Software Engineering', 'Web Development', 'UX Design'],
-      type: 'education'
     }
   ];
 
@@ -119,24 +85,20 @@ const Experience = () => {
               {/* Content */}
               <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 backdrop-blur-sm hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Calendar className="h-4 w-4 text-purple-400" />
-                    <span className="text-sm text-purple-400 font-medium">{exp.duration}</span>
-                  </div>
-                  
                   <h3 className="text-xl font-semibold text-foreground mb-2">{exp.title}</h3>
                   
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-3">
                     <span className="font-medium text-purple-300">{exp.company}</span>
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-3">
                     <MapPin className="h-3 w-3 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">{exp.location}</span>
                   </div>
                   
-                  {/* Brief description - always shown */}
-                  <div className="mb-4">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {exp.brief}
-                    </p>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Calendar className="h-4 w-4 text-purple-400" />
+                    <span className="text-sm text-purple-400 font-medium">{exp.duration}</span>
                   </div>
 
                   {/* Dropdown toggle button */}
@@ -165,22 +127,22 @@ const Experience = () => {
                           • {point}
                         </p>
                       ))}
-                    </div>
-                  )}
-
-                  {exp.skills.length > 0 && (
-                    <div className="mb-4">
-                      <p className="text-sm font-medium text-purple-300 mb-2">Skills:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill, skillIdx) => (
-                          <span
-                            key={skillIdx}
-                            className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
+                      
+                      {exp.skills.length > 0 && (
+                        <div className="mt-4">
+                          <p className="text-sm font-medium text-purple-300 mb-2">Skills:</p>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, skillIdx) => (
+                              <span
+                                key={skillIdx}
+                                className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                   

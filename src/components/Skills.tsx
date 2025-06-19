@@ -17,7 +17,7 @@ const Skills = () => {
     },
     {
       title: 'Tools & Technologies',
-      skills: ['Git', 'GitHub', 'Postman', 'Figma', 'AWS', 'Docker']
+      skills: ['Git', 'GitHub', 'Postman', 'Figma']
     },
     {
       title: 'Frameworks & Libraries',
