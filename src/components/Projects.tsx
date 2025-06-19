@@ -24,7 +24,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="pt-24 pb-20 bg-gradient-to-b from-background via-pink-950/10 to-background">
+    <section id="projects" className="section-padding scroll-mt-28 bg-gradient-to-b from-background via-pink-950/10 to-background">
       <div className="container mx-auto">
         <div className="text-center mb-14 overflow-visible">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text leading-normal">
