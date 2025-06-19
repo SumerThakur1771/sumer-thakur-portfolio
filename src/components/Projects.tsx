@@ -27,7 +27,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-gradient-to-b from-background via-pink-950/10 to-background">
       <div className="container mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text leading-normal">
             My Projects
           </h2>
         </div>
