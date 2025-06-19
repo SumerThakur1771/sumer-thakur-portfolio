@@ -5,9 +5,21 @@ import { Button } from './ui/button';
 import TechStack from './TechStack';
 
 const Hero = () => {
-  const scrollToNext = () => {
-    const aboutSection = document.getElementById('about');
-    aboutSection?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openResume = () => {
+    window.open('https://drive.google.com/file/d/1xwOpe0Yfvg5xhb5EE1lVNv4TfCGVWwmM/view?usp=sharing', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/sumer-thakur-658808288/', '_blank');
+  };
+
+  const openGitHub = () => {
+    window.open('https://github.com/SumerThakur1771', '_blank');
   };
 
   return (
@@ -20,14 +32,13 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10 max-w-4xl">
         {/* Profile Image */}
         <div className="relative mb-8 animate-fadeInUp">
-          <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-4 border-purple-500/30 flex items-center justify-center animate-glow">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-4xl font-bold gradient-text">
-              ST
-            </div>
+          <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-purple-500/30">
+            <img 
+              src="https://i.imgur.com/l2U0MRB.jpeg" 
+              alt="Sumer Thakur" 
+              className="w-full h-full object-cover"
+            />
           </div>
-          {/* Floating elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-500/30 rounded-full animate-float"></div>
-          <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-500/30 rounded-full animate-float delay-1000"></div>
         </div>
 
         {/* Content */}
@@ -49,25 +60,39 @@ const Hero = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-            <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+            <Button 
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+              onClick={scrollToContact}
+            >
               Contact me here
             </Button>
-            <Button variant="outline" className="border-purple-500/30 hover:bg-purple-500/20 px-8 py-3 rounded-full text-lg font-medium">
+            <Button 
+              variant="outline" 
+              className="border-purple-500/30 hover:bg-purple-500/20 px-8 py-3 rounded-full text-lg font-medium"
+              onClick={openResume}
+            >
               <Download className="mr-2 h-5 w-5" />
-              Download CV
+              View Resume
             </Button>
           </div>
 
           {/* Social links */}
           <div className="flex gap-4 justify-center pt-4">
-            <Button size="icon" variant="outline" className="rounded-full border-purple-500/30 hover:bg-purple-500/20">
+            <Button 
+              size="icon" 
+              variant="outline" 
+              className="rounded-full border-purple-500/30 hover:bg-purple-500/20"
+              onClick={openLinkedIn}
+            >
               <Linkedin className="h-5 w-5" />
             </Button>
-            <Button size="icon" variant="outline" className="rounded-full border-purple-500/30 hover:bg-purple-500/20">
+            <Button 
+              size="icon" 
+              variant="outline" 
+              className="rounded-full border-purple-500/30 hover:bg-purple-500/20"
+              onClick={openGitHub}
+            >
               <Github className="h-5 w-5" />
-            </Button>
-            <Button size="icon" variant="outline" className="rounded-full border-purple-500/30 hover:bg-purple-500/20">
-              <Mail className="h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -76,11 +101,6 @@ const Hero = () => {
         <div className="mt-12 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
           <TechStack />
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToNext}>
-        <ChevronDown className="h-8 w-8 text-purple-400" />
       </div>
     </section>
   );

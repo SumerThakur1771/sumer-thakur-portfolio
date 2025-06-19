@@ -9,17 +9,17 @@ const Projects = () => {
       title: 'StayScape',
       description: 'A full-stack accommodation platform with CRUD listings, Mapbox maps, Cloudinary uploads, and session-based authentication. Built with React, Node.js, and MongoDB.',
       link: 'https://stayscape-v7dj.onrender.com/listings',
-      github: '#',
+      github: 'https://github.com/SumerThakur1771/StayScape',
       tech: ['React', 'Node.js', 'MongoDB', 'Mapbox', 'Cloudinary'],
-      image: '/placeholder.svg'
+      image: 'https://i.imgur.com/8DhFxRI.png'
     },
     {
       title: 'EchoMates',
       description: 'A Figma-designed SaaS prototype for international student networking with AI-based prompts and goal tracking. Comprehensive UX research and design.',
       link: 'https://www.figma.com/proto/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam',
-      github: '#',
+      github: 'https://www.figma.com/design/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam?node-id=79-153&t=oUw3n7Exz6qQEhhP-0',
       tech: ['Figma', 'UX Design', 'Prototyping', 'AI Integration'],
-      image: '/placeholder.svg'
+      image: 'https://i.imgur.com/FWRcK6c.png'
     }
   ];
 
@@ -45,9 +45,11 @@ const Projects = () => {
               <div className="w-full lg:w-1/2">
                 <div className="relative group">
                   <div className="w-full h-80 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20">
-                    <div className="w-full h-full flex items-center justify-center text-6xl font-bold gradient-text group-hover:scale-110 transition-transform duration-500">
-                      {project.title.charAt(0)}
-                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -91,7 +93,7 @@ const Projects = () => {
                     onClick={() => window.open(project.github, '_blank')}
                   >
                     <Github className="mr-2 h-4 w-4" />
-                    Code
+                    {project.title === 'EchoMates' ? 'Wireframe Link' : 'Code'}
                   </Button>
                 </div>
               </div>

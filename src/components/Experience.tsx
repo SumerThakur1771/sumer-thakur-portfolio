@@ -1,14 +1,56 @@
 
-import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Experience = () => {
+  const [expandedItems, setExpandedItems] = useState<number[]>([]);
+
+  const toggleExpanded = (index: number) => {
+    setExpandedItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const experiences = [
+    {
+      title: 'Graduate Teaching Assistant',
+      company: 'Northeastern University',
+      location: 'Boston, Massachusetts, United States',
+      duration: 'Sep 2024 - Present',
+      brief: 'Assisted students in mastering web development concepts including HTML, CSS, REST, HTTP, SASS, MERN stack, and Agile methodologies.',
+      description: [
+        'Assisted students in mastering concepts related to HTML, CSS, REST, HTTP, SASS, MERN stack, Agile methodologies, and Domain-Driven Design as part of the "Web Design and User Experience Engineering" course',
+        'Guided students in implementing responsive designs, debugging code, and understanding user-centric design principles',
+        'Supported the application of Agile practices and Domain-Driven Design techniques in project development',
+        'Provided mentorship during coding assignments, facilitated lab sessions, and ensured adherence to best practices in modern web development',
+        'Collaborated with the professor to develop course materials and evaluate project submissions'
+      ],
+      skills: ['Web Development', 'Teaching', 'MERN Stack', 'Agile Methodologies', 'Mentoring'],
+      type: 'work'
+    },
+    {
+      title: 'Web Application Developer',
+      company: 'Northeastern University',
+      location: 'Boston, Massachusetts, United States',
+      duration: 'Jan 2024 - Sep 2024',
+      brief: 'Developed and maintained web applications using modern technologies and frameworks.',
+      description: [
+        'Developed and maintained web applications using React.js, Node.js, and MongoDB',
+        'Implemented responsive user interfaces and optimized application performance',
+        'Collaborated with cross-functional teams to deliver high-quality software solutions',
+        'Participated in code reviews and maintained coding standards'
+      ],
+      skills: ['React.js', 'Node.js', 'MongoDB', 'Web Development'],
+      type: 'work'
+    },
     {
       title: 'Event Assistant',
       company: 'Northeastern University',
       location: 'Boston, Massachusetts, United States',
       duration: 'Jan 2025 - Present',
+      brief: 'Maintained safety and order by enforcing regulations and delivered welcoming event experiences.',
       description: [
         'Maintained safety and order by enforcing Fire Marshal and NU Division of Public Safety regulations.',
         'Delivered welcoming event experiences by addressing inquiries and ensuring smooth audience engagement.',
@@ -22,6 +64,7 @@ const Experience = () => {
       company: 'Ralson India Limited',
       location: 'Ludhiana, Punjab, India',
       duration: 'Jan 2024 - Jun 2024',
+      brief: 'Enhanced website usability and increased user engagement through WordPress redesign and SEO optimization.',
       description: [
         'Enhanced website usability and increased user engagement by 5% through WordPress redesign and optimization.',
         'Achieved 4% growth in organic traffic through targeted SEO strategies and keyword optimization.',
@@ -30,6 +73,20 @@ const Experience = () => {
       ],
       skills: ['WordPress', 'SEO', 'UI/UX Design', 'ERP Integration'],
       type: 'work'
+    },
+    {
+      title: 'Master of Science in Information Systems',
+      company: 'Northeastern University',
+      location: 'Boston, MA',
+      duration: 'Sep 2024 - Dec 2026',
+      brief: 'Pursuing advanced studies in information systems with focus on full-stack development and software engineering.',
+      description: [
+        'Relevant Coursework: Web Design and User Experience, Application Engineering and Development, Concepts of Object-Oriented Design, User Experience Design and Testing',
+        'Maintaining strong academic performance with focus on practical application of theoretical concepts',
+        'Actively participating in research projects and collaborative learning environments'
+      ],
+      skills: ['Information Systems', 'Software Engineering', 'Web Development', 'UX Design'],
+      type: 'education'
     }
   ];
 
@@ -75,13 +132,41 @@ const Experience = () => {
                     <span className="text-sm text-muted-foreground">{exp.location}</span>
                   </div>
                   
-                  <div className="space-y-3 mb-4">
-                    {exp.description.map((point, idx) => (
-                      <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
-                        {point}
-                      </p>
-                    ))}
+                  {/* Brief description - always shown */}
+                  <div className="mb-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {exp.brief}
+                    </p>
                   </div>
+
+                  {/* Dropdown toggle button */}
+                  <button
+                    onClick={() => toggleExpanded(index)}
+                    className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors mb-4"
+                  >
+                    {expandedItems.includes(index) ? (
+                      <>
+                        <span className="text-sm font-medium">Show Less</span>
+                        <ChevronUp className="h-4 w-4" />
+                      </>
+                    ) : (
+                      <>
+                        <span className="text-sm font-medium">Show More</span>
+                        <ChevronDown className="h-4 w-4" />
+                      </>
+                    )}
+                  </button>
+
+                  {/* Detailed description - shown when expanded */}
+                  {expandedItems.includes(index) && (
+                    <div className="space-y-3 mb-4 border-t border-purple-500/20 pt-4">
+                      {exp.description.map((point, idx) => (
+                        <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
+                          • {point}
+                        </p>
+                      ))}
+                    </div>
+                  )}
 
                   {exp.skills.length > 0 && (
                     <div className="mb-4">
@@ -100,8 +185,12 @@ const Experience = () => {
                   )}
                   
                   <div>
-                    <span className="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-300 border border-green-500/30">
-                      Work Experience
+                    <span className={`px-3 py-1 text-xs rounded-full ${
+                      exp.type === 'education' 
+                        ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' 
+                        : 'bg-green-500/20 text-green-300 border border-green-500/30'
+                    }`}>
+                      {exp.type === 'education' ? 'Education' : 'Work Experience'}
                     </span>
                   </div>
                 </div>
