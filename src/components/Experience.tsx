@@ -10,11 +10,11 @@ const Experience = () => {
       location: 'Boston, Massachusetts, United States',
       duration: 'Jan 2025 - Present',
       description: [
-        'Maintained safety and order throughout the venue by enforcing Fire Marshal and NU Division of Public Safety regulations before, during, and after events.',
-        'Delivered a welcoming and organized event experience by addressing inquiries and ensuring smooth audience engagement.',
-        'Supported front-of-house operations by collaborating with the House Manager on tasks such as distributing event programs, checking tickets and wristbands, and assisting patrons.'
+        'Maintained safety and order by enforcing Fire Marshal and NU Division of Public Safety regulations.',
+        'Delivered welcoming event experiences by addressing inquiries and ensuring smooth audience engagement.',
+        'Supported front-of-house operations through ticket checking, program distribution, and patron assistance.'
       ],
-      skills: ['Event Management', 'Customer Service', 'Front-of-House Operations', 'Team Collaboration', 'Problem Solving', 'Time Management', 'Conflict Resolution', 'Public Relations'],
+      skills: ['Event Management', 'Customer Service', 'Team Collaboration', 'Problem Solving'],
       type: 'work'
     },
     {
@@ -23,24 +23,13 @@ const Experience = () => {
       location: 'Ludhiana, Punjab, India',
       duration: 'Jan 2024 - Jun 2024',
       description: [
-        'Enhanced website usability and increased user engagement by 5% through the redesign and optimization of the company website using WordPress, incorporating responsive web design principles.',
-        'Achieved a 4% growth in organic website traffic within three months by executing targeted SEO strategies, including keyword optimization, meta tag implementation, and on-page SEO enhancements.',
-        'Improved workflow efficiency and data accuracy by assisting in the integration of Channel Konnect ERP, reducing manual errors by 5% and streamlining inventory management processes.',
-        'Boosted user retention rates and reduced bounce rates by 6% through usability testing and collaborative refinements to website features.'
+        'Enhanced website usability and increased user engagement by 5% through WordPress redesign and optimization.',
+        'Achieved 4% growth in organic traffic through targeted SEO strategies and keyword optimization.',
+        'Improved workflow efficiency by assisting in Channel Konnect ERP integration, reducing manual errors by 5%.',
+        'Boosted user retention and reduced bounce rates by 6% through usability testing and feature refinements.'
       ],
-      skills: ['WordPress', 'UI/UX Design', 'Search Engine Optimization (SEO)', 'Responsive Web Design', 'Workflow Automation', 'Usability Testing'],
+      skills: ['WordPress', 'SEO', 'UI/UX Design', 'ERP Integration'],
       type: 'work'
-    },
-    {
-      title: 'Master of Science in Information Systems',
-      company: 'Northeastern University',
-      location: 'Boston, MA',
-      duration: 'Sep 2024 - Present',
-      description: [
-        'Pursuing advanced studies in information systems with focus on full-stack development, database management, and software engineering principles.'
-      ],
-      skills: [],
-      type: 'education'
     }
   ];
 
@@ -111,12 +100,8 @@ const Experience = () => {
                   )}
                   
                   <div>
-                    <span className={`px-3 py-1 text-xs rounded-full ${
-                      exp.type === 'education' 
-                        ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' 
-                        : 'bg-green-500/20 text-green-300 border border-green-500/30'
-                    }`}>
-                      {exp.type === 'education' ? 'Education' : 'Work Experience'}
+                    <span className="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-300 border border-green-500/30">
+                      Work Experience
                     </span>
                   </div>
                 </div>
