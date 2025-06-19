@@ -26,8 +26,8 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding scroll-mt-28 bg-gradient-to-b from-background via-pink-950/10 to-background">
       <div className="container mx-auto">
-        <div className="text-center mb-14 overflow-visible" style={{ minHeight: '4rem' }}>
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text leading-normal">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl md:leading-normal font-bold gradient-text">
             My Projects
           </h2>
         </div>
