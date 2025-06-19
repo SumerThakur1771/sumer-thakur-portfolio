@@ -97,7 +97,7 @@ const Hero = () => {
 
         {/* Tech stack icons */}
         <div className="mt-6 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-          {/* <TechStack /> */}
+          <TechStack />
         </div>
       </div>
     </section>
