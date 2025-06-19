@@ -23,9 +23,6 @@ const About = () => {
             <p>
               My expertise spans across modern web technologies including React.js, Node.js, MongoDB, and cloud platforms. I'm passionate about creating scalable applications that combine robust backend functionality with intuitive user interfaces, always focusing on clean code architecture and optimal user experience.
             </p>
-            <p>
-              Through my internship at Ralson India Limited and current role as an Event Assistant at Northeastern University, I've developed strong problem-solving skills and a keen eye for detail, enabling me to deliver projects that not only meet technical requirements but also exceed user expectations.
-            </p>
           </div>
 
           <Button 
