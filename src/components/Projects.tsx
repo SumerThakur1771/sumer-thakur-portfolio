@@ -20,14 +20,6 @@ const Projects = () => {
       github: '#',
       tech: ['Figma', 'UX Design', 'Prototyping', 'AI Integration'],
       image: '/placeholder.svg'
-    },
-    {
-      title: 'Tiny Taskers',
-      description: 'A SaaS job platform built with React, Redux, and Node.js featuring multilingual support, JWT authentication, and scalable APIs.',
-      link: '#',
-      github: '#',
-      tech: ['React', 'Redux', 'Node.js', 'JWT', 'i18n'],
-      image: '/placeholder.svg'
     }
   ];
 
