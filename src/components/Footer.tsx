@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © 2024 Sumer Thakur. All rights reserved.
+            © 2025 Sumer Thakur. All rights reserved.
           </p>
         </div>
       </div>
