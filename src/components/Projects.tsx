@@ -167,28 +167,27 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Project Image */}
-              <div
-                className={`w-full ${
-                  project.type === 'mobile' ? 'lg:w-[280px] mx-auto' : 'lg:w-1/2'
-                } flex justify-center items-center`}
-              >
-                {project.type === 'mobile' ? (
-                  <div className="aspect-[9/16] w-full bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20 shadow-lg">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-full h-80 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                )}
+              <div className="w-full lg:w-1/2">
+                <div className="relative group flex justify-center items-center">
+                  {project.type === 'mobile' ? (
+                    <div className="aspect-[9/16] w-full max-w-xs bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20 shadow-lg">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full h-[22rem] bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl overflow-hidden border border-purple-500/20">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
               </div>
 
               {/* Project Content */}
