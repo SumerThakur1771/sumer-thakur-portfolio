@@ -10,7 +10,7 @@ const Projects = () => {
       description: 'A full-stack accommodation platform with CRUD listings, Mapbox maps, Cloudinary uploads, and session-based authentication. Built with React, Node.js, and MongoDB.',
       link: 'https://stayscape-v7dj.onrender.com/listings',
       github: 'https://github.com/SumerThakur1771/StayScape',
-      tech: ['React', 'Node.js', 'MongoDB', 'Mapbox', 'Cloudinary'],
+      tech: ['Node.js', 'Express', 'MongoDB', 'EJS', 'Cloudinary', 'Mapbox', 'Passport.js', 'CI/CD (GitHub Actions)'],
       image: '/lovable-uploads/eb5dea90-7779-4f0f-8eae-f73280d2a173.png'
     },
     {
@@ -115,6 +115,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-
