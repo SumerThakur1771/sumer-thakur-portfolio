@@ -18,7 +18,7 @@ const Projects = () => {
       description: 'A Figma-designed SaaS prototype for international student networking with AI-based prompts and goal tracking. Comprehensive UX research and design.',
       link: 'https://www.figma.com/proto/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam',
       github: 'https://www.figma.com/design/ZcOYtt6E7OLUVqNIPX41us/EchoMates_Final-Exam?node-id=79-153&t=oUw3n7Exz6qQEhhP-0',
-      tech: ['Figma', 'UX Design', 'Prototyping', 'AI Integration'],
+      tech: ['Figma', 'UX Design', 'Prototyping'],
       image: '/lovable-uploads/2e1897c3-7005-4aae-90d4-593b636ca9be.png'
     }
   ];
