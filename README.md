@@ -68,4 +68,4 @@ It reflects my skills in modern web development while focusing on clean design a
 ## Contact
 
 If you’d like to connect or collaborate, you can reach me here:  
-[Portfolio](https://sumer-thakur-portfolio.lovable.app/) | [LinkedIn](https://www.linkedin.com/in/sumer-thakur-658808288/) | [Email](mailto:thakur.sum@northeastern.edu)
+[Portfolio](https://sumer-thakur-portfolio.lovable.app/) | [LinkedIn](https://www.linkedin.com/in/sumer-thakur-658808288/)
