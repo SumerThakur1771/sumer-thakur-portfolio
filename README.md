@@ -7,7 +7,7 @@ This portfolio highlights my projects, technical stack, and design choices.
 
 ## Live Demo
 
-[Visit My Portfolio](https://lovable.dev/projects/06519c3a-a02b-41a8-9e1b-39d3ac05d3b0)
+[Visit My Portfolio](https://sumer-thakur-portfolio.lovable.app/)
 
 ---
 
@@ -68,4 +68,4 @@ It reflects my skills in modern web development while focusing on clean design a
 ## Contact
 
 If you’d like to connect or collaborate, you can reach me here:  
-[Portfolio](https://lovable.dev/projects/06519c3a-a02b-41a8-9e1b-39d3ac05d3b0) | [LinkedIn](https://www.linkedin.com/in/sumer-thakur-658808288/) | [Email](mailto:thakur.sum@northeastern.edu)
+[Portfolio](https://sumer-thakur-portfolio.lovable.app/) | [LinkedIn](https://www.linkedin.com/in/sumer-thakur-658808288/) | [Email](mailto:thakur.sum@northeastern.edu)
